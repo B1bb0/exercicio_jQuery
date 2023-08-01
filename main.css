@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'REM', sans-serif;
+}
+
+body {
+    background-color: bisque;
+}
+
+header{
+    padding: 16px;
+}
+
+li:hover {
+    cursor: pointer;
+    text-decoration: line-through;
+}
+
+ul, li {
+    padding: 5px;
+    font-weight: bolder;
+}
+
+input,button {
+    margin: 4px;
+    margin-bottom: 24px;
+    padding: 8px;
+}
+
+button, ul {
+    cursor: pointer;
+}
+
+.container header, form, ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
