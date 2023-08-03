@@ -1,12 +1,23 @@
 $(document).ready(function(){
 
-    $('#btn-add').click(function(e){
-        
+    $('ul').on('click', 'li', function(e) {
+
         e.preventDefault();
 
-            const addTarefa = $('#addTarefa').val();
-            const novaTarefa = $('<ul></ul>');
-            $(`<li>${addTarefa}</li>`).appendTo(novaTarefa);
-            $(novaTarefa).appendTo('ul').click();
+        $(this).toggleClass('riscarTarefa'); 
+
+    });
+
+    $('#btn-add').click(function(e){
+
+        e.preventDefault();
+
+            const addTarefa = $('#adicionaTarefa').val();
+            const novaTarefa = $('<li></li>');
+            $(`<a>${addTarefa}</a>`).appendTo(novaTarefa);
+            $(novaTarefa).appendTo('ul').click(riscarTarefa);
+            
+            $('#adicionaTarefa').val('');
+
     })
 })
